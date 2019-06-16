@@ -1,0 +1,143 @@
+.row {
+	margin: 0;
+}
+
+img {
+	max-width: 30%;
+}
+
+.jumbotron {
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	color :white;
+	padding: 0;
+	margin-top: 0em;
+	min-height: 30em;
+	position: relative;
+}
+
+.jumbotron:nth-child(2n) .desc {
+	float: left;
+}
+
+.jumbotron:nth-child(2n) .desc {
+	float: right;
+}
+
+.jumbotron::after {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 10em;
+	position: absolute;
+	bottom: 0;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.jumbotron::before {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 10em;
+	position: absolute;
+	top: -10em;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.jumbotron:nth-child(4n-3), .jumbotron:nth-child(4n-3)::before {
+	background-image: url('images/1.jpg');
+}
+
+.jumbotron:nth-child(4n-2), .jumbotron:nth-child(4n-2)::before {
+	background-image: url('images/2.jpg');
+}
+
+.jumbotron:nth-child(4n-1), .jumbotron:nth-child(4n-1)::before {
+	background-image: url('images/3.jpg');
+}
+
+.jumbotron:nth-child(4n), .jumbotron:nth-child(4n)::before {
+	background-image: url('images/4.jpg');
+}
+
+.jumbotron:nth-child(2n-1)::before {
+	clip-path: polygon(0 100%, 100% 0, 100% 100%);
+}
+
+.jumbotron:nth-child(2n)::before {
+	clip-path: polygon(0 0, 0 100%, 100% 100%);
+}
+
+.jumbotron .container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+	.jumbotron:nth-child(2n) .container {
+		align-items: flex-end;
+		text-align: right !important;
+	}
+
+	.jumbotron:nth-child(2n-1) .container {
+		align-items: flex-start;
+		text-align: left !important;
+	}
+}
+
+.desc {
+	flex: 0 1 auto;
+	width: 70%;
+	padding: 5%;
+	font-size: 24px;
+	clear: both;
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 8em;
+	border-radius: 2em;
+	text-shadow: 1px 0 3px black, 0 0 10px black;
+}
+
+.desc span {
+	flex: 1 0 auto;
+}
+
+.row-title {
+	font-size: 48px;
+	font-weight: bold;
+}
+
+.desc .cta {
+	margin-top: 0.5em;
+	padding: 0.1em;
+	font-size: 28px;
+	font-weight: bold;
+	width: auto;
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+header {
+	margin-bottom: 6rem;
+	font-size: 80px;
+	font-weight: bold;
+}
+
+footer {
+	font-size: 16px;
+}
+
+footer, header {
+	text-align: center;
+	padding: 3em;
+}
